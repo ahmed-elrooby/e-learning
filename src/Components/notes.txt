@@ -1,0 +1,5 @@
+for register as student ==> http://elearningsystem.runasp.net/api/Auth/register-student
+for register as instructor ==>http://elearningsystem.runasp.net/api/Auth/register-instructor
+for login  ==> http://elearningsystem.runasp.net/api/Auth/login      email and password
+
+
