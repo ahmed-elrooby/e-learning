@@ -10,13 +10,9 @@ export const  links2 =[
         content:"Courses",
         path:"/Courses"
     } ,
+
     {
         id:2,
-        content:"payment",
-        path:"/Payment"
-    } ,
-    {
-        id:3,
         content:"contact",
         path:"/Contact"
     } ,

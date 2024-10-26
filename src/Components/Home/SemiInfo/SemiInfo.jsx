@@ -7,7 +7,7 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 const SemiInfo = () => {
   return <>
   <div className="bg-[--secondary-color] md:mt-[0px] my-[50px]">
-    <div className="w-[95%] mx-auto py-[15px] flex flex-wrap lg:items-center items-start justify-center gap-5  md:justify-around">
+    <div className="w-[95%] mx-auto py-[15px] flex flex-wrap  gap-5  md:justify-around">
     <div className="flex gap-[15px] items-center capitalize text-[--main-color] font-bold text-[20px]">
 <FaBookOpen className="text-[--main-color]" size={32}/>
 <h1 className="">

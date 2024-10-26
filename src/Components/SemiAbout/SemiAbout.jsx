@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { FaIdCard } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaBookReader } from "react-icons/fa";
@@ -9,7 +9,47 @@ import Lottie from "lottie-react";
 import semiAbout from "../../Images/SemiAbout.json";
 import Tilt from "react-parallax-tilt";
 
+
 const SemiAbout = () => {
+ 
+  const data =[
+    {
+      id:0,
+      title:"Free membership registration",
+      number:1,
+      icon:<FaIdCard/>
+    },
+    {
+      id:1,
+      title:"Free training",
+      number:2,
+      icon:<FaGraduationCap/>
+    },
+    {
+      id:2,
+      title:"The latest educational curricula",
+      number:3,
+      icon:<FaBookReader/>
+    },
+    {
+      id:3,
+      title:"Flexibility in the work environment",
+      number:4,
+      icon:<FaLaptop/>
+    },
+  ];
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <div className="bg-[#F9F9F9] py-[50px]">
@@ -31,59 +71,29 @@ const SemiAbout = () => {
                 An educational platform specialized in developing skills with
                 the best lecturers
               </h4>
-              <Link
+            {token?"":  <Link
                 className="rounded-lg text-white hover:bg-[#f97316a6]  capitalize text-[20px] px-[15px] py-[8px]  transition-all bg-[--main-color] w-max font-bold  "
                 href="/SignUp"
               >
                 join us
-              </Link>
+              </Link>}
             </div>
             <div className="grid grid-cols-1 gap-[20px] justify-around md:grid-cols-2">
-              <Tilt>
-              <div className="flex transition-all hover:shadow-lg h-[200px]  border border-[--main-color] relative py-3 pl-3 flex-col  rounded-lg items-start  gap-[30px] bg-[#FFFFFF]">
-              <FaIdCard className="text-[--main-color] text-[40px]" />
+              {data.map((ele,idx)=> <Tilt key={idx}>
+              <div className="flex transition-all hover:shadow-lg h-[250px]  border border-[--main-color] relative py-3 px-1  flex-col  rounded-lg items-start  gap-[30px] bg-[#FFFFFF]">
+             <div className="text-[--main-color] text-[40px]">
+              {ele.icon}
+             </div>
                   <h4 className="text-[30px] font-semibold text-[--secondary-color] capitalize">
-                    Free membership registration
+                    {ele.title}
                   </h4>
                   <h1 className="text-[#D5D5D5] text-[45px] font-bold absolute top-[10px] right-3">
-                    1
+                    {ele.number}
                   </h1>
                 </div>
-              </Tilt>
-              <Tilt>
-              <div className="flex transition-all hover:shadow-lg h-[200px]  border border-[--main-color] relative py-3 pl-3 flex-col  rounded-lg items-start  gap-[30px] bg-[#FFFFFF]">
-              <FaGraduationCap className="text-[--main-color] text-[50px]" />
-                  <h4 className="text-[30px] font-semibold text-[--secondary-color] capitalize">
-                    Free training
-                  </h4>
-                  <h1 className="text-[#D5D5D5] text-[45px] font-bold absolute top-[10px] right-3">
-                    2
-                  </h1>
-                </div>
-              </Tilt>
-              <Tilt>
-                <div className="flex transition-all hover:shadow-lg h-[200px]  border border-[--main-color] relative py-3 pl-3 flex-col  rounded-lg items-start  gap-[30px] bg-[#FFFFFF]">
-                  <FaBookReader className="text-[--main-color] text-[50px]" />
-                  <h4 className="text-[30px] font-semibold text-[--secondary-color] capitalize">
-                    The latest educational curricula
-                  </h4>
-                  <h1 className="text-[#D5D5D5] text-[45px] font-bold absolute top-[10px] right-3">
-                    3
-                  </h1>
-                </div>
-              </Tilt>
-              <Tilt>
-                <div className="flex transition-all hover:shadow-lg  border border-[--main-color] relative py-3 pl-3 flex-col  rounded-lg items-start  gap-[30px] bg-[#FFFFFF]">
-                  <FaLaptop className="text-[--main-color] text-[50px]" />
-                  <h4 className="text-[30px] font-semibold text-[--secondary-color] capitalize">
-                    {" "}
-                    Flexibility in the work environment
-                  </h4>
-                  <h1 className="text-[#D5D5D5] text-[45px] font-bold absolute top-[10px] right-3">
-                    4
-                  </h1>
-                </div>
-              </Tilt>
+              </Tilt>)}
+<button onClick={refresh}>refresh</button>
+           
             </div>
           </div>
         </div>

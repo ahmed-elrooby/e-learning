@@ -1,12 +1,10 @@
-import FeedBack from '@/Components/FeedBack/FeedBack'
+import FeedBackPage from '@/Components/FeedBackPage/FeedBackPage'
 import React from 'react'
 
 const page = () => {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ad libero minima consequatur blanditiis sint maxime quibusdam. Odio quaerat autem quo sit, sapiente necessitatibus obcaecati dolores suscipit impedit quasi nisi.
-    </div>
-  )
+  return <>
+  <FeedBackPage />
+  </>
 }
 
 export default page

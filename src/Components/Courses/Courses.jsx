@@ -5,13 +5,14 @@ import Image from 'next/image'
 import React from 'react'
 import Tilt from 'react-parallax-tilt';
 import courses from "../../Images/courses.json"
-import Link from 'next/link';
-
+import CourseImage from "../../Images/avatar-01.png"
 
 
 
 const Courses = () => {
-  return <>
+   
+      
+    return <>
 <div className="w-[90%] mx-auto my-[50px]">
 <div className="flex flex-col items-center justify-between md:flex-row">
 <div className="flex flex-col items-start gap-4 md:w-[800px] w-full">
@@ -23,24 +24,9 @@ const Courses = () => {
   </div>  
    <div className="grid items-center grid-cols-2 gap-3 mb-[50px] md:grid-cols-3 lg:grid-cols-4">
     <Tilt>
-        <Link href="courses/id" className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
-<div className="p-2">
-<Image className="w-full max-w-full rounded-lg" src={require("../../Images/avatar-01.png")} alt="img" />
-</div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
-                <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
-                <p className="capitalize text-[18px]">description</p>
-            </div>
-            <div className="flex  pb-[10px] flex-col items-center justify-around md:flex-row">
-                <span className="text-[18px] capitalize">price</span>
-                <input className="border border-[--main-color] text-[--main-color] font-bold px-4 py-[2px] cursor-pointer transition-all hover:text-white hover:bg-[--main-color] rounded-lg text-[20px]" type="submit" value="Enroll" />
-            </div>
-        </Link>
-
-        </Tilt>
-        <Tilt>
         <div className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
 <div className="p-2">
-<Image className="w-full max-w-full rounded-lg" src={require("../../Images/avatar-01.png")} alt="img" />
+<Image className="w-full max-w-full rounded-lg" src={CourseImage} alt="img" />
 </div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
                 <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
                 <p className="capitalize text-[18px]">description</p>
@@ -55,7 +41,7 @@ const Courses = () => {
         <Tilt>
         <div className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
 <div className="p-2">
-<Image className="w-full max-w-full rounded-lg" src={require("../../Images/avatar-01.png")} alt="img" />
+<Image className="w-full max-w-full rounded-lg" src={CourseImage} alt="img" />
 </div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
                 <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
                 <p className="capitalize text-[18px]">description</p>
@@ -70,7 +56,7 @@ const Courses = () => {
         <Tilt>
         <div className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
 <div className="p-2">
-<Image className="w-full max-w-full rounded-lg" src={require("../../Images/avatar-01.png")} alt="img" />
+<Image className="w-full max-w-full rounded-lg" src={CourseImage} alt="img" />
 </div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
                 <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
                 <p className="capitalize text-[18px]">description</p>
@@ -85,7 +71,22 @@ const Courses = () => {
         <Tilt>
         <div className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
 <div className="p-2">
-<Image className="w-full max-w-full rounded-lg" src={require("../../Images/avatar-01.png")} alt="img" />
+<Image className="w-full max-w-full rounded-lg" src={CourseImage} alt="img" />
+</div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
+                <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
+                <p className="capitalize text-[18px]">description</p>
+            </div>
+            <div className="flex  pb-[10px] flex-col items-center justify-around md:flex-row">
+                <span className="text-[18px] capitalize">price</span>
+                <input className="border border-[--main-color] text-[--main-color] font-bold px-4 py-[2px] cursor-pointer transition-all hover:text-white hover:bg-[--main-color] rounded-lg text-[20px]" type="submit" value="Enroll" />
+            </div>
+        </div>
+
+        </Tilt>
+        <Tilt>
+        <div className="border transition-all hover:shadow-lg cursor-pointer rounded-lg border-[--main-color] flex flex-col gap-2">
+<div className="p-2">
+<Image className="w-full max-w-full rounded-lg" src={CourseImage} alt="img" />
 </div>            <div className="flex flex-col items-start gap-2 p-3 m-2">
                 <h1 className="capitalize font-bold text-[--main-color]">name of course</h1>
                 <p className="capitalize text-[18px]">description</p>

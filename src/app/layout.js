@@ -3,6 +3,7 @@ import Footer from "@/Components/Footer/Footer";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast';
 import Up from "@/Components/Up/Up";
+import ContextData from "@/Context/ContextData";
 
 
 
@@ -17,12 +18,17 @@ export default function RootLayout({ children }) {
       <body
         
       >
+            <ContextData>
         <Header/>
         <Up />
+    
         {children}
+
+      
         <Toaster />
 
         <Footer/>
+        </ContextData>
       </body>
     </html>
   );

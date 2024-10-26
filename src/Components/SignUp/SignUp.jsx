@@ -1,7 +1,7 @@
 "use client";
 import Lottie from "lottie-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -14,8 +14,10 @@ import { IoMdEyeOff } from "react-icons/io";
 import { FaSpinner } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Image from "next/image";
+import { ContextValue } from "@/Context/ContextData";
 
 const SignUp = () => {
+  const {setUserData,userData} = useContext(ContextValue)
   const router = useRouter();
   const [user, setUser] = useState({
     firstName: "",
@@ -44,6 +46,7 @@ const [loading, setLoading] = useState(false)
     const newUser = { ...user };
     newUser[userName] = userValue;
     setUser(newUser);
+    setUserData(user)
   };
 
   // send data
@@ -56,12 +59,13 @@ const [loading, setLoading] = useState(false)
       );
       if (data.succeeded) {
         successMessage();
+       
         router.push("/SignIn");
       } else {
         toast.error(data.message); 
       }
     } catch (error) {
-      toast.error(error?.response?.data.message || "An unexpected error occurred" ); // عرض رسالة الخطأ إذا حدث استثناء
+      toast.error("The new password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.");
     } finally {
       setLoading(false);
 
@@ -96,7 +100,7 @@ const [loading, setLoading] = useState(false)
 
   return (
     <>
-      <div className="pt-[100px] w-[90%] mx-auto mb-[50px]">
+      <div className="pt-[100px] w-[90%] h-screen mx-auto mb-[50px]">
         <h1 className="text-[--main-color] font-bold capitalize text-center mb-[20px] text-[16px] md:text-[24px]">
           {" "}
           Welcome to Eduvi Online Learning Platform{" "}
